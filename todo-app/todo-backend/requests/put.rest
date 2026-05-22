@@ -4,3 +4,10 @@ content-type: application/json
 {
     "text": "Write code", "done": false
 }
+###
+POST http://localhost:3000/todos/ HTTP/1.1
+content-type: application/json
+
+{
+    "text": "Write even more code", "done": false
+}

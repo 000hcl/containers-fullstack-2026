@@ -1,0 +1,18 @@
+user@primary:~/containers-fullstack-2026/todo-app/todo-backend$ sudo docker exec -it 729 redis-cli
+127.0.0.1:6379> KEYS *
+1) "todos"
+127.0.0.1:6379> GET todos
+"2"
+127.0.0.1:6379> SET todos 9001
+OK
+127.0.0.1:6379> GET todos
+"90011"
+127.0.0.1:6379> SET todos 9001
+OK
+127.0.0.1:6379> GET todos
+"9002"
+127.0.0.1:6379> DEL todos
+(integer) 1
+127.0.0.1:6379> GET todos
+"1"
+127.0.0.1:6379> 

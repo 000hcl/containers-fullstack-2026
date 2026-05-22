@@ -16,7 +16,7 @@ router.post('/', async (req, res) => {
     done: false
   })
   const current = await redis.get('todos')
-  await redis.set('todos', current+1)
+  await redis.set('todos', Number(current)+1)
   res.send(todo);
 });
 
