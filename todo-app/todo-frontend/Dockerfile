@@ -4,6 +4,7 @@ COPY . .
 RUN npm ci
 ENV VITE_BACKEND_URL=http://localhost:3000/
 RUN npm run build
+RUN npx vitest
 
 FROM nginx:1.29-alpine
 COPY --from=build-stage /usr/src/app/dist /usr/share/nginx/html
