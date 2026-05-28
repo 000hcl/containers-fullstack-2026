@@ -26,6 +26,7 @@ const Todo = ({ todo, onClickDelete, onClickComplete }) => {
         maxWidth: '70%',
         margin: 'auto',
       }}
+      key={todo.id}
     >
       <span>{todo.text}</span>
       {todo.done ? doneInfo : notDoneInfo}
