@@ -2,7 +2,7 @@ FROM node:24 AS build-stage
 WORKDIR /usr/src/app
 COPY . .
 RUN npm ci
-ENV VITE_BACKEND_URL=http://localhost:3000/
+ENV VITE_BACKEND_URL=/api
 RUN npm run build
 RUN npx vitest
 
